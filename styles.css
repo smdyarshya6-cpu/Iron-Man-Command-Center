@@ -143,7 +143,7 @@ html[dir="ltr"] .nav-item.active{background:linear-gradient(270deg,hsl(var(--ah)
 .jalali-date-picker .mini-btn{width:auto;padding:0 12px;white-space:nowrap}
 
 /* ===== IRON MAN / STARK COMMAND CENTER identity ===== */
-:root{--h:356;--ah:2;--gh:43;--sm:.58;--asm:1}
+:root:not([data-char]){--h:356;--ah:2;--gh:43;--sm:.58;--asm:1}
 body{
   background:
     radial-gradient(ellipse at 52% -16%,rgba(255,45,48,.23),transparent 42%),

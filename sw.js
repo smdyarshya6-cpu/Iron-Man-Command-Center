@@ -2,22 +2,22 @@
 // Strategy: network-first for the app's own files (so updates always show up),
 // with a cache fallback so the app still opens offline.
 
-const CACHE_NAME = 'ironman-pwa-v13';
+const CACHE_NAME = 'ironman-pwa-v14';
 
 const CORE_ASSETS = [
   './',
   './index.html',
-  './styles.css?v=10',
-  './app.js?v=10',
+  './styles.css?v=11',
+  './app.js?v=11',
   './manifest.webmanifest'
 ];
 
 const OPTIONAL_ASSETS = [
-  './icons/icon-192.png?v=10',
-  './icons/icon-512.png?v=10',
+  './icons/icon-192.png?v=11',
+  './icons/icon-512.png?v=11',
   './icons/icon-maskable-512.png',
-  './icons/apple-touch-icon.png?v=10',
-  './icons/favicon-64.png?v=10'
+  './icons/apple-touch-icon.png?v=11',
+  './icons/favicon-64.png?v=11'
 ];
 
 const NETWORK_TIMEOUT_MS = 5000;
