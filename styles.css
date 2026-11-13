@@ -180,3 +180,179 @@ body{
 footer span:first-child{color:#e9bb63;text-shadow:0 0 12px rgba(232,180,75,.2)}
 body.light .brand b,body.light .profile b{color:#8d1e25}
 body.light footer span:first-child{color:#9a272d}
+/* IRON MAN x JARVIS — COMMAND CENTER REDESIGN */
+:root {
+  --green: #00d9ff;
+  --green2: #ff3347;
+  --amber: #ffc15c;
+  --line: rgba(100, 190, 255, .17);
+  --shadow: 0 18px 55px rgba(0,0,0,.38);
+}
+
+body {
+  background:
+    radial-gradient(ellipse at 12% 5%, rgba(255,45,65,.13), transparent 35%),
+    radial-gradient(ellipse at 90% 15%, rgba(0,190,255,.12), transparent 38%),
+    #070a12;
+}
+
+.sidebar {
+  background: rgba(8,12,23,.88);
+  backdrop-filter: blur(22px);
+  border-left: 1px solid rgba(0,210,255,.2);
+}
+
+.brand-mark {
+  box-shadow: 0 0 18px rgba(255,45,65,.45),
+              0 0 35px rgba(0,200,255,.2);
+}
+
+.stat,
+.panel,
+.task-card,
+.routine-card,
+.calendar-wrap,
+.assistant-box,
+.setting-card {
+  background: linear-gradient(
+    145deg,
+    rgba(20,29,46,.78),
+    rgba(9,14,25,.88)
+  );
+  backdrop-filter: blur(18px);
+  border: 1px solid rgba(110,190,255,.17);
+  border-radius: 19px;
+  box-shadow: 0 12px 35px rgba(0,0,0,.25);
+  transition: transform .25s ease, border-color .25s ease,
+              box-shadow .25s ease;
+}
+
+.stat:hover,
+.panel:hover,
+.task-card:hover,
+.routine-card:hover,
+.setting-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(0,215,255,.45);
+  box-shadow: 0 12px 35px rgba(0,180,255,.1);
+}
+
+.stat {
+  overflow: hidden;
+}
+
+.stat::before {
+  content: "";
+  position: absolute;
+  width: 76px;
+  height: 76px;
+  left: 13px;
+  top: 18px;
+  border: 2px solid rgba(0,210,255,.24);
+  border-right-color: #ff4054;
+  border-radius: 50%;
+  box-shadow: 0 0 18px rgba(0,200,255,.12);
+  animation: reactor-spin 9s linear infinite;
+}
+
+.stat strong {
+  position: relative;
+  z-index: 1;
+  color: #eafaff;
+  text-shadow: 0 0 16px rgba(0,200,255,.3);
+}
+
+@keyframes reactor-spin {
+  to { transform: rotate(360deg); }
+}
+
+.nav-item {
+  border-radius: 13px;
+  transition: .22s ease;
+}
+
+.nav-item.active {
+  background: linear-gradient(
+    90deg,
+    rgba(255,45,65,.18),
+    rgba(0,200,255,.09)
+  );
+  box-shadow: inset -3px 0 #ff4054;
+}
+
+.primary-btn {
+  background: linear-gradient(120deg,#ff3449,#c9152b 55%,#087fae);
+  color: white;
+  box-shadow: 0 5px 24px rgba(255,40,65,.25);
+  transition: .2s ease;
+}
+
+.primary-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(255,40,65,.38);
+}
+
+.secondary-btn,
+.icon-btn,
+.mini-btn,
+.quick-action {
+  backdrop-filter: blur(12px);
+  transition: .2s ease;
+}
+
+.search:focus,
+.field input:focus,
+.field textarea:focus,
+.field select:focus {
+  border-color: #00d9ff;
+  box-shadow: 0 0 0 3px rgba(0,217,255,.1);
+}
+
+.toast {
+  background: rgba(10,20,35,.94);
+  backdrop-filter: blur(18px);
+  border: 1px solid rgba(0,217,255,.5);
+  box-shadow: 0 0 25px rgba(0,190,255,.17);
+}
+
+.page {
+  animation: command-entry .35s ease both;
+}
+
+@keyframes command-entry {
+  from { opacity: 0; transform: translateY(9px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.task-row {
+  border-color: rgba(100,190,255,.12);
+  background: rgba(255,255,255,.025);
+  transition: .2s ease;
+}
+
+.task-row:hover {
+  background: rgba(0,180,255,.055);
+  border-color: rgba(0,190,255,.3);
+}
+
+.modal {
+  background: rgba(10,16,29,.97);
+  backdrop-filter: blur(22px);
+  border-color: rgba(0,200,255,.28);
+}
+
+@media (max-width:650px) {
+  .stat::before {
+    width: 58px;
+    height: 58px;
+    left: 8px;
+    top: 14px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    transition-duration: .01ms !important;
+  }
+}
