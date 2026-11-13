@@ -72,9 +72,14 @@
         <div class="field hidden" id="monthDayField"><label for="routineMonthDay" data-i18n="monthDay">روز ماه (شمسی)</label><input id="routineMonthDay" type="number" min="1" max="31" inputmode="numeric"></div>
         <label class="check-row"><input type="checkbox" id="routineConfirm"> <span data-i18n="confirmCompletion">برای این روتین تأیید انجام‌شدن هم داشته باش</span></label>
       </div>
-      <div class="modal-actions"><button type="button" class="secondary-btn" id="cancelModal" data-i18n="cancel">انصراف</button><button type="submit" class="primary-btn" id="saveItem" data-i18n="save">ذخیره</button></div>
+      <div class="modal-actions">
+        <button type="button" class="secondary-btn" id="cancelModal" data-i18n="cancel">انصراف</button>
+        <button type="submit" class="primary-btn" id="saveItem" data-i18n="save">ذخیره</button>
+      </div>
     </form>
   </dialog>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <script src="app.js?v=11"></script>
 </body>
 </html>
